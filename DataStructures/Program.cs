@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Reflection;
 
 namespace DataStructures
 {
@@ -8,11 +10,15 @@ namespace DataStructures
         {
             BinaryTree<int> tree = new BinaryTree<int>();
 
-            tree.Add(3);
-            tree.Add(1);
-            tree.Add(5);
+            Random random = new Random();
 
-            Console.WriteLine(tree.Head.Value);
+            for (int i = 0; i < 1000000; i++)
+            {
+                // Stack overflow at the moment
+                //tree.Add(random.Next());
+            }
+
+            Console.WriteLine(tree.Head.Value); 
         }
     }
 }
